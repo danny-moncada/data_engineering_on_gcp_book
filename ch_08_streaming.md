@@ -81,8 +81,8 @@ def publish_data(event, context):
 
 Our Cloud Function requires two libraries, so we've got to let GCP know we need these in our environment. As discussed in [Chapter 6](https://github.com/Nunie123/data_engineering_on_gcp_book/blob/master/ch_06_event_triggers.md), we do this by adding a `requirements.txt` file in the same folder as our Cloud Function:
 ``` text
-google-cloud-storage=1.35.0
-google-cloud-pubsub=2.2.0
+google-cloud-storage==1.35.0
+google-cloud-pubsub==2.2.0
 ```
 
 Now let's deploy this function and tell it to trigger whenever a new file is uploaded to our bucket. Run the following from the same folder where the `main.py` file you just created is saved.
